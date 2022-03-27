@@ -238,9 +238,7 @@ export default {
         label: '備註',
         field: 'note',
         sortable: false,
-        // style: 'width: 400px;word-wrap: break-word;word-break: break-all;',
-      }
-      ]
+      }]
     })
     const mapList = (data) => {
       const newArr = data.map((item) => {
@@ -423,13 +421,21 @@ export default {
 }
 .container {
   & ::v-deep(.q-table) {
+    // table-layout: fixed;
     thead tr {
       background-color: #fff;
     }
-    // td {
-    //   word-break: break-all;
-    //   white-space: normal;
+    // thead th {
+    //   min-width: 220px;
     // }
+    // thead tr th:last-child {
+    //   width: 200px;
+    // }
+    tbody tr td:last-child {
+      white-space: pre-line;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
   }
 }
 
