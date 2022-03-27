@@ -105,15 +105,12 @@
             :options="sortByOptions.list"
             :option-label="sortByOptions.optionLabel"
             options-cover />
-
         </div>
-
       </template>
       <template
         v-slot:body-cell-orderStatus="props">
         <td class="items-center flex">
-
-          <p class="text-no-wrap q-m-none">
+          <p class="text-no-wrap no-margin">
             {{props.row.orderStatus }}</p>
           <p>{{props.row.shippingStatus}}</p>
         </td>
